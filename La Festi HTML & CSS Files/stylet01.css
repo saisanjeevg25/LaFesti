@@ -1,0 +1,553 @@
+*{
+    margin: auto;
+    padding: 10px; 
+}
+body{
+    background-color: floralwhite;
+    padding: 0;
+    margin: 0;
+    display: block;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+
+.header{
+    height: 20vh;
+     width:100%;
+     background-color: seashell;
+     position: relative;
+ }
+ 
+ nav{
+     display: flex;
+     padding-left: 100px;
+     padding-right: 30px;
+     padding-top: 0px;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ nav img{
+     width: 180px;
+     height: 180px;
+     margin-top: -10%;
+ }
+ 
+ 
+ .nav-links{
+     flex:1;
+     text-align: right;
+     
+ }
+ .nav-links ul li{
+     list-style: none;
+     display: inline-block;
+     padding:8px 12px;
+     position: relative;
+ }
+ 
+ .nav-links ul li a{
+     color: #ff5252;
+     text-decoration: none;
+     font-size: 16px;
+ }
+ 
+ .nav-links ul li::after{
+     content: '';
+     width: 0%;
+     height:2px;
+     background:#f44336;
+     display: block;
+     margin: auto;
+     transition: 0.5s;
+ }
+ 
+ .nav-links ul li:hover::after{
+     width:100%;
+ }
+ nav .fa{
+     display:none;
+ }
+  
+@media (max-width: 1000px){     
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position:absolute;
+        background:seashell;
+        height:100vh;
+        width:200px;
+        color: white;
+        top:0;
+        right:-200px;
+        text-align: left;
+        z-index:2;
+        transition: 1s;
+     }
+     nav .fa{
+         display: block;
+         color: black;
+         margin: 5px;
+         font-size: 22px;
+         cursor: pointer;
+     }
+ 
+     .nav-links ul{
+         padding:30px;
+         color: white;
+     }
+     .main-logo{
+         width: 80%;
+         height: 80%;
+         max-width: 400px;
+         margin-top: 2px;
+         margin-left: -100px;
+     }
+     .nav-links ul li a{
+         color: #ff5252;
+         text-decoration: none;
+         font-size: 13.2px;
+     }
+ }
+
+.butn{
+    margin-left:40%; 
+}
+.butn button{   
+    border-radius: 5px;
+    background-color: #ff5252; 
+    border: none;
+    font-family:'Merriweather Sans', sans-serif;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;    
+    font-size: 16px;
+    margin: 4px 30px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    justify-content: center;
+}
+.butn button:hover{
+    background-color: white;
+    color:#ff5252 ;
+}
+.progress{
+    margin: 30px auto;
+}
+
+.progress img{
+    width: 80px;
+    margin-bottom: 20px;   
+}
+.progress h1{
+    margin-left: 370px;
+    font-size: 30px;
+    color:#ff5252 ;
+}
+.progress ul{
+    text-align: center;
+}
+.progress ul li{
+    display: inline-block;
+    width: 200px;
+    position: relative;
+
+}
+.progress ul li .fas{
+    background: rgb(255, 104, 104);
+    width: 16px;
+    height: 16px;
+    color: rgb(19, 20, 18);
+    border-radius: 50%;
+    padding: 5px;
+}
+.progress ul li .fas::after{
+    content: '';
+    background: rgb(2, 104, 19);
+    height: 5px;
+    width: 250px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 140px;
+    z-index: -1;
+}
+.progress ul li:nth-child(4) .fas{
+    background: tomato;
+}
+ul li:nth-child(4) .fas::after{
+    background: red;
+}
+.progress ul li:nth-child(1) .fas,
+.progress ul li:nth-child(2) .fas,
+.progress ul li:nth-child(3) .fas{
+    background: rgb(110, 248, 140);
+}
+ul li:nth-child(1) .fas::after,
+ul li:nth-child(2) .fas::after,
+ul li:nth-child(3) .fas::after{
+    background: rgb(64, 180, 64);
+}
+ ul li:first-child .fas::after{
+    width: 125px;
+    left: 100px;
+}
+ul li:last-child .fas::after{
+    width: 120px;    
+}
+.contact-map{
+    left: 200px;
+    top: 200px;
+    width: 410px;
+    height: 400px;
+}
+.count{
+    width: 45%;
+    background:#ff5252;
+    padding: 5px 20px;
+    box-shadow: 0 16px 16px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+h2{
+    color: white;
+    font-size: 30px;
+}       
+.count .start-widget input{
+    display: none;    
+}
+.start-widget label{
+    font-size: 40px;
+    color: hsl(60, 1%, 14%);
+    padding: 15px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+input#rate-5:checked ~ label{
+    color: hsl(56, 100%, 73%);
+    text-shadow: 0 0 20px rgb(250, 247, 78);
+}
+.count form{
+    display: none;    
+}
+input:checked ~ form{
+    display: block;
+}
+form header{
+    width: 100%;
+    font-size: 18.72px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+form .textarea{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: rgb(12, 11, 11);
+    border-radius: 5px;
+    background: rgb(243, 238, 238);
+    padding: 10px;
+    font-size: 18.72px; 
+    resize: none;   
+}
+form .btn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+form .btn button{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    background: rgb(243, 235, 235);
+    color: rgb(12, 12, 12);
+    font-size: 18.72px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form .btn button:hover{
+    background: #f0dc6e;
+    color: rgb(8, 8, 8);
+}
+.count1{
+    width: 45%;
+    background: #ff5252;
+    padding: 5px 20px;
+    box-shadow: 0 16px 16px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}        
+.count1 .start-widget1 input{
+    display: none;    
+}
+.start-widget1 label{
+    font-size: 40px;
+    color: rgb(41, 41, 39);
+    padding: 15px;
+    float: right;
+    transition: all 0.2s ease;
+}
+h2{
+    color: white;
+    font-size: 30px;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover~ label{
+    color:hsl(56, 100%, 73%);
+}
+input:checked~label{
+    color: hsl(56, 100%, 73%);
+}
+input#rate-55:checked ~ label{
+    color:hsl(56, 100%, 73%);
+    text-shadow:  0 0 20px rgb(250, 247, 78);
+}
+input#rate-44:checked ~ label{
+    color: #fe7;
+    text-shadow:  0 0 20px rgb(250, 247, 78);
+}
+input#rate-33:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px rgb(250, 247, 78);
+}
+.count1 form{
+    display: none;    
+}
+input:checked ~ form{
+    display: block;
+}
+form header{
+    width: 100%;
+    font-size: 30px;
+    color: rgba(255, 253, 253, 0.753);
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+#rate-11:checked ~ form header:before{
+    content: "I just hate it";
+}
+#rate-22:checked ~ form header:before{
+    content: "I don't like it";
+}
+#rate-33:checked ~ form header:before{
+    content: "It is good";
+}
+#rate-44:checked ~ form header:before{
+    content: "I love it";
+}
+#rate-55:checked ~ form header:before{
+    content: "It is awesome";
+}
+form .textarea1{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+form .textarea1 textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: rgb(8, 8, 8);
+    border-radius: 5px;
+    background:white;
+    padding: 15px;
+    font-size: 18.72px; 
+    resize: none;   
+}
+form .bttn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+form .bttn button{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    background:white;
+    color:black;
+    font-size: 18.72px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form .bttn button:hover{
+    background: #f0dc6e;
+    color: rgb(8, 8, 8);
+}
+@media(max-width: 1000px){
+    .footer{
+        display: none;
+    }
+}
+@media (max-width: 1000px){
+  .progess{
+      margin: 200px auto;
+  
+  }
+  .progress img{
+      width: 80px;
+      margin-bottom: 20px;   
+  }
+  .progress h1{
+      margin-left: 1px;
+      font-size: 35px;
+  }
+  .butn{
+      margin-left: 20%; 
+      margin-top: 20px; 
+  }
+  .contact-map{
+      
+      margin-left: 70px;
+      margin-right: 70px;
+      top: 200px;
+      width: 300px;
+      height: 300px;
+  }
+  .count{
+      width: 90%;
+      margin-left: 7px;      
+  }     
+  .count1{
+      width: 90%;
+      margin-left: 7px;
+   } 
+   ul{
+    text-align: center;
+  }
+  .progress ul li{
+    display: inline-block;
+    width: 76px;
+    position: relative;
+  }
+  .progress ul li .fas{
+    background: rgb(255, 104, 104);
+    width: 16px;
+    height: 16px;
+    color: rgb(19, 20, 18);
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .progress ul li .fas::after{
+    content: '';
+    background: rgb(64, 180, 64);
+    height: 5px;
+    width: 30px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 140px;
+    
+  } 
+  .progress ul li:first-child .fas::after{
+    width: 310px;
+    left: 50px;
+  }
+  .progress ul li:last-child .fas::after{
+    width: 50px; 
+    background: tomato;      
+  }   
+}
+footer{
+    color: black;
+    background-color: seashell;
+    padding: 20px 20px;
+    margin-top: 5%;
+}
+.logo{
+    width:120px;
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container2 ul{
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+.container2 li{
+    padding: 0 15px;
+    margin-bottom: 16px;
+    display: inline-block;    
+    position: relative;
+}
+
+.container2 a{
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: red;
+}
+
+.container2 ul li::after{
+    content: '';
+    width: 0%;
+    height:2px;
+    background:#f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.container2 ul li:hover::after{
+    width:100%;
+    
+}
+
+
+.flex-row{
+    margin-bottom: 1px;
+}
+
+.flex-row .fa{
+    display: block;
+    color: black;
+    margin: 5px;
+    /* text-decoration: none; */
+    font-size: 33px;
+    cursor: pointer;
+}
+.flex-row .fa:hover{
+    color: #ff5252;
+    
+}
+p{
+    text-align: center;
+}
+
+@media (max-width: 500px){
+    .container2 ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}

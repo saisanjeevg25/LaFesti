@@ -1,0 +1,656 @@
+ /* Heading */ 
+ .header{
+    height: 20vh;
+     width:100%;
+     background-color:seashell;
+     position: relative;
+ }
+ 
+ nav{
+     display: flex;
+     padding-left: 100px;
+     padding-right: 30px;
+     padding-top: 0px;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ nav img{
+     width: 180px;
+     height: 180px;
+     margin-top: -10%;
+ }
+ 
+ /* --search-- */
+ 
+  .search .input{
+     border: 0;
+     outline: none;
+     color: #ff5252;
+ }
+ 
+ ._search{
+     width: 500px;
+     margin-left: 20%;
+     margin-top: -5%;
+ }
+ 
+ ._search .search_box{
+     position: relative;
+     width: 500px;
+     height: 40px;
+ }
+ 
+ ._search .search_box .input{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     padding: 10px 20px;
+     box-sizing: border-box;
+     box-shadow: 0 10px 12px rgba(0,0,0,0.5);
+     border-radius: 20px;
+     font-size: 18px;
+ }
+ 
+ ._search .search_box .btn{
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 60px;
+     height: 100%;
+     background: #ff5252;
+     z-index: 1;
+     cursor: pointer;
+     border-radius: 20px;
+ 
+ }
+ 
+ ._search .search_box .btn:hover{
+     background: #ff5252;
+ }
+ 
+ ._search .search_box .btn.btn_common i{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     color: white;
+     font-size: 20px;
+ }
+ 
+ @media (max-width: 500px){
+     ._search{
+         width: 200px;
+         margin-left: -40%;
+     }
+ 
+     ._search .search_box{
+         position: relative;
+         width: 240px;
+         height: 32px;
+      
+     }
+     ._search .search_box .btn {
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 40px;
+         height: 32px;
+         background: #ff5252;
+         z-index: 1;
+         cursor: pointer;
+         border-radius: 20px;
+     }
+     
+ } 
+ .nav-links{
+     flex:1;
+     text-align: right;
+     
+ }
+ 
+ .nav-links ul li{
+     list-style: none;
+     display: inline-block;
+     padding:8px 12px;
+     position: relative;
+ }
+ 
+ .nav-links ul li a{
+     color: #ff5252;
+     text-decoration: none;
+     font-size: 16px;
+ }
+ 
+ .nav-links ul li::after{
+     content: '';
+     width: 0%;
+     height:2px;
+     background:#f44336;
+     display: block;
+     margin: auto;
+     transition: 0.5s;
+ }
+ 
+ .nav-links ul li:hover::after{
+     width:100%;
+ }
+ 
+ 
+ /* Heading */
+ 
+ 
+ 
+ 
+ 
+ nav .fa{
+     display:none;
+ }
+ 
+ @media (max-width: 500px)
+ {
+     
+     .nav-links ul li{
+         display: block;
+     }
+     .nav-links{
+         position:absolute;
+         background:seashell;
+         height:100vh;
+         width:200px;
+         color: white;
+         top:0;
+         right:-220px;
+         text-align: left;
+         z-index:2;
+         transition: 1s;
+     }
+     nav .fa{
+         display: block;
+         color: black;
+         margin: 5px;
+         font-size: 22px;
+         cursor: pointer;
+     }
+ 
+     .nav-links ul{
+         padding:30px;
+         color: white;
+     }
+     .main-logo{
+         width: 80%;
+         height: 80%;
+         max-width: 400px;
+         margin-top: 2px;
+         margin-left: -80px;
+     }
+     .nav-links ul li a{
+         color: #ff5252;
+         text-decoration: none;
+         font-size: 13.2px;
+     }
+ }
+ 
+ 
+  /* Filter_button */ 
+
+ .filter_button{
+    display: inline-block;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 18.72 px;
+    background-color: seashell ;
+    width: 100%;
+    padding: 0px 9px;
+    margin-left: 0px;
+    
+}
+
+.button {
+    border: 0px;
+    border-radius: 10px;
+    color:seashell;
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:   18.72 px;
+    margin: 10px 90px;
+    cursor: pointer;
+    background-color: #ff5252;
+    font-family: 'Merriweather Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 14px 40px;
+    
+    }
+
+    @media(max-width: 944px){
+        .filter_button{
+            display: inline-block;
+            font-family: 'Merriweather Sans', sans-serif;
+            padding: 5px 0px;
+            width:100%;
+            
+      }
+      .button {
+        border: 1px;
+        border-radius: 10px;
+        color:#d1ccc0;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 10px 40px;
+        cursor: pointer;
+        background-color: #ff5252;
+        font-family: 'Merriweather Sans', sans-serif;
+        box-sizing: border-box;
+        padding: 10px 10px;
+        
+        }
+        
+    }
+ 
+    /*--switch--*/
+._switch{
+    
+    position: relative;
+    width: 70px;
+    height: 40px;
+    margin: 0 0px;
+    float: right;
+    margin-top: -53px;
+}
+
+.slider{
+    
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+._switch input{
+    
+    display: none;
+}
+
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    left: 5px;
+    bottom: 5px;
+    background-color: white;
+    transition: 0.5s;
+    border-radius: 50px;
+}
+
+._switch input:checked + .slider{
+    background-color: rgb(22, 177, 22);
+}
+
+._switch input:checked + .slider::before{
+    transform: translateX(30px);
+}
+
+.veg{
+    position: absolute;
+    display: inline-block;
+    right: 100px;
+    top:190px;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #ff5252;
+    margin-top: -35px;
+
+}
+
+@media (max-width: 500px){
+    
+._switch{
+    margin: 0 20px;
+    margin-top: -55px;
+}
+.veg{
+    position: absolute;
+    display: inline-block;
+    right: 100px;
+    top:190px;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #ff5252;
+    margin-right: -65px;
+
+}
+
+}
+
+.head2{
+    font-size: 18.72px ;
+    font-family: 'Merriweather Sans', sans-serif;
+color:#ff5252 ;
+}
+
+@media (max-width: 500px){.head2{
+    font-size: 14.72px ;
+    font-family: 'Merriweather Sans', sans-serif;
+color:#ff5252 ;
+}}
+
+
+
+.gallery{
+    margin:100px 50px;
+    display: flex;
+    justify-content:space-evenly ;
+    padding: 0px;
+  
+}
+.galleryimg1{
+    transition: 1s;
+    padding:10px;
+    width:200px;
+    border-radius: 25px;
+}
+.galleryimg1:hover{
+   filter:grayscale(50%);
+   transform:scale(1.1);
+}
+
+* {
+box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 40px;
+    }
+    
+.column img {
+opacity: 0.8; 
+cursor: pointer;
+border-radius: 10px; 
+}
+    
+.column img:hover {
+opacity: 1;
+border-radius: 10px;
+}
+
+
+
+div.gallery {
+margin: 10px;
+border: 1px solid #ccc;
+float: none;
+width: 200px;
+display: inline-block;
+border-radius: 10px;
+opacity: 0.9;
+margin-bottom: 50px;
+}
+      
+div.gallery:hover {
+transform:scale(1.1) ;
+filter:grayscale(100%);
+}
+div.gallery img {
+width: 100%;
+height: 30%;
+border-radius: 10px;
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: center;
+        font-family: 'Merriweather Sans', sans;
+        font-size: 15px;
+      }   
+
+ 
+      div.hotels {
+        border: 1px solid rgb(95, 94, 94);
+        border-radius: 5px;
+        padding: 0px;
+        background-color:#ff5252;
+        
+        
+        
+        
+      }
+      
+      div.hotels:hover {
+        border: 2px solid #777;
+        filter:opacity(90%);
+        border-radius: 5px;
+        transform:scale(1.0) ;
+      }
+      
+      div.hotels img {
+        width: 100%;
+        height:70%;
+        border-radius: 5px;
+        opacity: 0.9;
+       
+      }
+      
+      .hotels_desc {
+        padding: 10px;
+        text-align: left;
+        font-family: 'Merriweather Sans', sans;
+        color:seashell;
+      }
+      .hotels_name{
+        text-align: left;
+        padding: 10px;
+        line-height: 40px;
+        size: 500px;
+        font-size: 30px;
+        color:seashell;
+        
+        font-family: 'Merriweather Sans', sans;
+
+      }
+      .hotels_ratings{
+        text-align: left;
+        padding: 10px;
+        font-size: 25px;
+        color: seashell;
+        font-family: 'Merriweather Sans', sans;
+
+      }
+      
+      .hotels {
+        box-shadow: 0 10px 12px rgba(0, 0, 0, 0.473);
+        box-sizing: border-box;
+        align-items: left;
+        border-radius: 10px;
+        width: 90%;
+        height: 70%;
+    
+        
+      }
+      
+      .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+      }
+
+
+      @media(max-width:944px)
+      {
+        .hotels_desc {
+            padding: 10px;
+            text-align: left;
+            font-family: 'Merriweather Sans', sans;
+            color:seashell;
+            font-size: 12px;
+          }
+          .hotels_name{
+            text-align: left;
+            padding: 10px;
+            line-height: 40px;
+            size: 500px;
+            font-size: 20px;
+            color:seashell;
+            
+            font-family: 'Merriweather Sans', sans;
+
+          }
+          .hotels_ratings{
+            text-align: left;
+            padding: 0px;
+            padding-left: 10px;
+            font-size: 15px;
+            color: seashell;
+            font-family: 'Merriweather Sans', sans;
+
+          }
+      }
+      
+     
+      
+      @media only screen and (max-width: 500px) {
+        .responsive {
+          width: 50%;
+          width: 50%;
+          margin: 6px 0;
+        }
+      }
+      
+      .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+
+
+      .navbar {
+        overflow: hidden;
+        background-color: seashell;
+        bottom: 10px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+      }
+      
+      .navbar a {
+        float: left;
+        display: block;
+        color: #ff5252;
+        text-align: center;
+        padding: 14px 30px;
+        font-family: 'Merriweather Sans', sans;
+        font-size: 17px;
+      }
+      
+      .navbar a:hover {
+        background: #f1f1f1;
+        color: rgba(0, 0, 0, 0.979);
+      }
+      
+      .navbar a.active {
+        background-color: #ff5252;
+        color: white;
+      }
+
+
+      .cate{
+        font-family: 'Merriweather Sans', sans;
+        font-size: 18.72px;
+        text-align: justify;
+        
+        }
+
+
+        footer{
+            color: black;
+            background-color: seashell;
+            padding: 20px 20px;
+            margin-top: 5%;
+        }
+        .logo{
+            width:120px;
+        }
+        .container2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container2 ul{
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        .container2 li{
+            padding: 0 15px;
+            margin-bottom: 16px;
+            display: inline-block;
+            
+            position: relative;
+        }
+        
+        .container2 a{
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #ff5252;
+        }
+        
+        .container2 ul li::after{
+            content: '';
+            width: 0%;
+            height:2px;
+            background: #ff5252;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        
+        .container2 ul li:hover::after{
+            width:100%;
+            
+        }
+        
+        
+        .flex-row{
+            margin-bottom: 1px;
+        }
+        
+        .flex-row .fa{
+            display: block;
+            color: black;
+            margin: 5px;
+            /* text-decoration: none; */
+            font-size: 33px;
+            cursor: pointer;
+        }
+        .flex-row .fa:hover{
+            color: #ff5252;
+            
+        }
+        p{
+            text-align: center;
+        }
+        
+        @media (max-width: 500px){
+            .container2 ul{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
